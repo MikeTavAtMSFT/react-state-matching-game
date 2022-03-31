@@ -9,7 +9,7 @@ const Tile = (props) => {
     : null;
 
   return (
-    <div className='Tile' style={tileColor}>
+    <div className='Tile' style={tileColor} onClick={() => {props.handleTileClicked(props.id, props.color);}}>
       { props.selected || props.matched ? (
         <props.svg />
       ) : (
